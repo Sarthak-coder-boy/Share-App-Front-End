@@ -174,12 +174,3 @@ const showToast = (msg) => {
         toast.style.transform = "translate(-50%,60px)";
       }, 2000);
 };
-
-// const showToast = (msg) => {
-//   clearTimeout(toastTimer);
-//   toast.innerText = msg;
-//   toast.classList.add("show");
-//   toastTimer = setTimeout(() => {
-//     toast.classList.remove("show");
-//   }, 2000);
-// };
