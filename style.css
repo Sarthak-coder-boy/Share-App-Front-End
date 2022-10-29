@@ -237,11 +237,6 @@ p{
     background-size: contain;
   }
   
-  
-  .show.toast {
-    transform: translate(50%, 0);
-  }
-  
   @media screen and (max-width: 900px) {
     :root {
       --container-width: 320px;
