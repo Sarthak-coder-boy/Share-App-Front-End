@@ -35,7 +35,7 @@ dropZone.addEventListener("drop", (e) => {
       fileInput.files = files;
       uploadFile();
     } else {
-      showToast("Max file size is 100MB");
+      showToast("Max file size is 5GB");
     }
   } else if (files.length > 1) {
     showToast("You can't upload multiple files");
@@ -59,7 +59,7 @@ dropZone.addEventListener("dragleave", (e) => {
 // file input change and uploader
 fileInput.addEventListener("change", () => {
   if (fileInput.files[0].size > maxAllowedSize) {
-    showToast("Max file size is 100MB");
+    showToast("Max file size is 5GB");
     fileInput.value = ""; // reset the input
     return;
   }
@@ -165,11 +165,21 @@ emailForm.addEventListener("submit", (e) => {
 
 let toastTimer;
 // the toast function
+
 const showToast = (msg) => {
-  clearTimeout(toastTimer);
   toast.innerText = msg;
-  toast.classList.add("show");
+  toast.style.transform = "translate(-50%,0)";
+  clearTimeout(toastTimer);
   toastTimer = setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2000);
+        toast.style.transform = "translate(-50%,60px)";
+      }, 2000);
 };
+
+// const showToast = (msg) => {
+//   clearTimeout(toastTimer);
+//   toast.innerText = msg;
+//   toast.classList.add("show");
+//   toastTimer = setTimeout(() => {
+//     toast.classList.remove("show");
+//   }, 2000);
+// };

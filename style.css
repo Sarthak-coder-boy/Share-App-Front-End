@@ -9,12 +9,11 @@ body,html{
     height: 100%;
     padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: system-ui;
     font-weight:100px;
     font-size: larger;
+    overflow: hidden;
+    
 }
 
 body,.drop, .upload{
@@ -23,6 +22,9 @@ body,.drop, .upload{
     align-items: center;
     justify-content: center;
 } 
+body{
+    flex-direction: row;
+}
 
 .upload{
 background-color: #fff;
@@ -216,10 +218,10 @@ p{
 .toast {
     position: absolute;
     bottom: 10px;
-    right: 50%;
-    transform: translate(50%, 60px);
+    left: 50%;
+    transform: translate(-50%, 60px);
     padding: 10px 20px;
-    background: var(--light-blue);
+    background: #03a9f4;
     color: #fff;
     border-radius: 5px;
     font-size: 18px;
@@ -227,6 +229,14 @@ p{
       0px 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition: transform ease-in-out 0.2s;
   }
+
+   .upload-vector {
+    background:url(https://raw.githubusercontent.com/ShivamJoker/InShare/master/undraw-upload.svg) no-repeat center;
+    height: 50vh;
+    width: 50vw;
+    background-size: contain;
+  }
+  
   
   .show.toast {
     transform: translate(50%, 0);
@@ -236,10 +246,10 @@ p{
     :root {
       --container-width: 320px;
     }
-    .image-vector {
+    .upload-vector {
       display: none;
     }
-    .email-container .field {
+    .email .field {
       flex-direction: column;
       width: 300px;
     }
