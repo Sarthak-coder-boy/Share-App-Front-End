@@ -119,7 +119,6 @@ const uploadFile = () => {
 
 const onFileUploadSuccess = (res) => {
   fileInput.value = ""; // reset the input
-  status.innerText = "Uploaded";
 
   // remove the disabled attribute from form btn & make text send
   emailForm[2].removeAttribute("disabled");
